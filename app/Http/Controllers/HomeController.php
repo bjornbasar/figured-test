@@ -28,7 +28,7 @@ class HomeController extends Controller
 
 		foreach ($entries as $key => $entry)
 		{
-			$entries[$key]->entry = html_entity_decode($entry->entry);
+			$entries[$key]->entry = strip_tags(html_entity_decode($entry->entry));
 		}
 
         return view('admin', ['entries' => $entries]);

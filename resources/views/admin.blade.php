@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-		<button class="btn btn-success btn-block" onclick="location.href='/edit'">New Entry</button>
+		<button class="btn btn-primary btn-block" onclick="location.href='/edit'">New Entry</button>
 		@foreach($entries as $entry)
 
 			<div class="card">
@@ -17,7 +17,7 @@
 				</div>
 
                 <div class="card-body">
-					{!! $entry->entry !!}
+					{{ str_limit($entry->entry, 50, '...') }}
                 </div>
             </div>
 
