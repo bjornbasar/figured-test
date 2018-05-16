@@ -24,7 +24,12 @@ class IndexController extends Controller
      */
     public function index()
     {
-		$entries = Entries::all()->jsonSerialize();
+		$entries = Entries::all();
+
+		foreach ($entries as $key => $entry)
+		{
+			$entries[$key]->entry = html_entity_decode($entry->entry);
+		}
 
         return view('welcome', ['entries' => $entries]);
     }

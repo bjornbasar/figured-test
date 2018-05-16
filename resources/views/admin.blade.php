@@ -11,8 +11,8 @@
                 <div class="card-header">
 					{{ $entry->title }}
 					<span style="float: right;">
-						<button class="btn btn-success  btn-sm" onclick="location.href='/edit/{{ $entry->entries_id }}'">Edit</button>
-						<button class="btn btn-danger btn-sm" onclick="location.href='/delete/{{ $entry->entries_id }}'">Delete</button>
+						<button class="btn btn-success  btn-sm" onclick="location.href='/edit/{{ $entry->_id }}'">Edit</button>
+						<button class="btn btn-danger btn-sm" onclick="location.href='/delete/{{ $entry->_id }}'">Delete</button>
 					</span>
 				</div>
 

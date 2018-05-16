@@ -1,8 +1,16 @@
 <?php
 namespace App;
+
 use Illuminate\Database\Eloquent\Model;
-class Entries extends Model
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+
+class Entries extends Eloquent
 {
 	//
-	protected $primaryKey = 'entries_id';
+	protected $connection = 'mongodb';
+	protected $collection = 'entries';
+
+	// protected $primaryKey = 'entries_id';
+
+	protected $fillable = ['title', 'entry'];
 }

@@ -10,7 +10,7 @@
 						<div class="form-row">
 							<div class="col-8">
 								<input type="text" class="form-control" placeholder="Title" name="title" value="{{$entry['title'] }}" />
-								<input type="hidden" class="form-control" name="entries_id" value="{{$entry['entries_id'] }}" />
+								<input type="hidden" class="form-control" name="entries_id" value="{{$entry['_id'] }}" />
 							</div>
 							<div class="col">
 								{{ csrf_field() }}
